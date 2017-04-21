@@ -33,3 +33,14 @@ $('.start').click(function() {
 
 // Execute run function
 run();
+
+
+
+
+// The state dog of North Carolina is what breed?
+// Chewbacca, the hairy Wookiee in the Star Wars movies, was inspired by George Lucas' what?
+// Every known dog breed except this one has a pink tongue. What is this breed?
+// What dog breed does not bark, but does make yodeling noises?
+// s it a duck…or a dog? The Newfoundland breed has a water resistant coat and webbed feet. This dog was originally bred to help haul nets for fishermen and rescuing people at risk of drowning.
+// Corgi is Welsh for "dwarf dog."
+// The Norwegian Lundehund is the only dog that has six toes on each foot!
