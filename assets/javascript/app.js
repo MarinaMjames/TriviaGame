@@ -24,7 +24,7 @@ $('.start').click(function() {
 		
 		if (triviaQuestions = triviaQuestions){
 			
-			$('.trivia-question').append(triviaQuestions);
+			$('.trivia-question').append(triviaQuestions[0]);
 			//Display correct answer and wrong answers - buttons 
 			// Correct Answer is Plott Hound
 			$('.answer-options').append("<button>" + "Border Collie" + "</button>");
