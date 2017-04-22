@@ -23,10 +23,10 @@ $('.start').click(function(start) {
 		// displays first question
 		
 		$('.questionOne').append(triviaQuestions[0]);
-		$('.questionOne').append("form" + "<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie" + "</input>");
+		$('.questionOne').append("<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie" + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne' class='correct'>" + " Plott Hound" + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wolfhound" + "</input>");
-		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound" + "</input>" + "<br>" + "</form>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
 				});
@@ -35,10 +35,10 @@ $('.start').click(function(start) {
 				});
 
 		$('.questionTwo').append(triviaQuestions[1]);
-		$('.questionTwo').append("<form>" + "<br>" + "<input type='radio' name='questionTwo' class='wrong'>" + " Afghan Hound" + "</input>");
+		$('.questionTwo').append("<br>" + "<input type='radio' name='questionTwo' class='wrong'>" + " Afghan Hound" + "</input>");
 		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Old English Sheepdog" + "</input>");
 		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Shih Tzu" + "</input>");
-		$('.questionTwo').append("<input type='radio' name='questionTwo' class='correct'>" + " Alaskan Malamute" + "</input>" + "<br>" + "</form>");
+		$('.questionTwo').append("<input type='radio' name='questionTwo' class='correct'>" + " Alaskan Malamute" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
 				});
@@ -46,12 +46,66 @@ $('.start').click(function(start) {
 					wrongAnswers++;
 				});
 
+		$('.questionThree').append(triviaQuestions[2]);
+		$('.questionThree').append("<br>" + "<input type='radio' name='questionThree' class='correct'>" + " Chow Chow" + "</input>");
+		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Chihuahua" + "</input>");
+		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " French Bulldog" + "</input>");
+		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Maltese" + "</input>" + "<br>");
+				$('.correct').click(function(){
+					correctAnswers++;
+				});
+				$('.wrong').click(function(){
+					wrongAnswers++;
+				});
 
+		$('.questionFour').append(triviaQuestions[3]);
+		$('.questionFour').append("<br>" + "<input type='radio' name='questionFour' class='wrong'>" + " French Bulldog" + "</input>");
+		$('.questionFour').append("<input type='radio' name='questionFour' class='correct'>" + " Basenji" + "</input>");
+		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Alaskan Malamute" + "</input>");
+		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Australian Shepherd" + "</input>" + "<br>");
+				$('.correct').click(function(){
+					correctAnswers++;
+				});
+				$('.wrong').click(function(){
+					wrongAnswers++;
+				});
+		$('.questionFive').append(triviaQuestions[4]);
+		$('.questionFive').append("<br>" + "<input type='radio' name='questionFive' class='wrong'>" + " Italian Greyhound" + "</input>");
+		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " Basenji" + "</input>");
+		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " French Bulldog" + "</input>");
+		$('.questionFive').append("<input type='radio' name='questionFive' class='correct'>" + " Newfoundland" + "</input>" + "<br>");
+				$('.correct').click(function(){
+					correctAnswers++;
+				});
+				$('.wrong').click(function(){
+					wrongAnswers++;
+				});
+		$('.questionSix').append(triviaQuestions[5]);
+		$('.questionSix').append("<br>" + "<input type='radio' name='questionSix' class='wrong'>" + " Big ears" + "</input>");
+		$('.questionSix').append("<input type='radio' name='questionSix' class='correct'>" + " Dwarf dog" + "</input>");
+		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Little legs" + "</input>");
+		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Fluffy dog" + "</input>" + "<br>");
+				$('.correct').click(function(){
+					correctAnswers++;
+				});
+				$('.wrong').click(function(){
+					wrongAnswers++;
+				});
+						$('.questionSeven').append(triviaQuestions[6]);
+		$('.questionSeven').append("<br>" + "<input type='radio' name='questionSeven' class='wrong'>" + " Toy Fox Terrier" + "</input>");
+		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Basenji" + "</input>");
+		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Golden Retriever" + "</input>");
+		$('.questionSeven').append("<input type='radio' name='questionSeven' class='correct'>" + " Norwegian Lundehund" + "</input>" + "<br>");
+				$('.correct').click(function(){
+					correctAnswers++;
+				});
+				$('.wrong').click(function(){
+					wrongAnswers++;
+				});
 
+	$('.done').click(function(){
 
-
-
-
+	});
 
 		// if (triviaQuestions = triviaQuestions){
 			
@@ -86,8 +140,16 @@ $('.start').click(function(start) {
 			
 
 // When seconds left hits 0, show Times Up! in div with class time-left
+		
 		if (seconds <= 0){
 			$('.time-left').html("<h3>Times Up!</h3>");
+			$('.questionOne').remove();
+			$('.questionTwo').remove();
+			$('.questionThree').remove();
+			$('.questionFour').remove();
+			$('.questionFive').remove();
+			$('.questionSix').remove();
+			$('.questionSeven').remove();
 			// resets the interalId variable
 			clearInterval(intervalId);
 		}
