@@ -22,24 +22,58 @@ $('.start').click(function(start) {
 	$('.start').remove();
 		// displays first question
 		
-		if (triviaQuestions = triviaQuestions){
-			
-			$('.trivia-question').append(triviaQuestions[0]);
-			//Display correct answer and wrong answers - buttons 
-			// Correct Answer is Plott Hound
-			$('.answer-options').append("<button class='wrong'>" + "Border Collie" + "</button>");
-			$('.answer-options').append("<button class='correct'>" + "Plott Hound" + "</button>");
-			$('.answer-options').append("<button class='wrong'>" + "Irish Wolfhound" + "</button>");
-			$('.answer-options').append("<button class='wrong'>" + "American Foxhound" + "</button>");
+		$('.questionOne').append(triviaQuestions[0]);
+		$('.questionOne').append("form" + "<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie" + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='correct'>" + " Plott Hound" + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wolfhound" + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound" + "</input>" + "<br>" + "</form>");
+				$('.correct').click(function(){
+					correctAnswers++;
+				});
+				$('.wrong').click(function(){
+					wrongAnswers++;
+				});
 
-			$('.correct').click(function(){
-				$('.time-left').html("You guessed Correctly!");
-				correctAnswers++;
-			});
-			$('.wrong').click(function(){
-				$('.time-left').html("You guessed Incorrectly! The correct Answer is Plott Hound.");
-				wrongAnswers++;
-			});
+		$('.questionTwo').append(triviaQuestions[1]);
+		$('.questionTwo').append("<form>" + "<br>" + "<input type='radio' name='questionTwo' class='wrong'>" + " Afghan Hound" + "</input>");
+		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Old English Sheepdog" + "</input>");
+		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Shih Tzu" + "</input>");
+		$('.questionTwo').append("<input type='radio' name='questionTwo' class='correct'>" + " Alaskan Malamute" + "</input>" + "<br>" + "</form>");
+				$('.correct').click(function(){
+					correctAnswers++;
+				});
+				$('.wrong').click(function(){
+					wrongAnswers++;
+				});
+
+
+
+
+
+
+
+
+		// if (triviaQuestions = triviaQuestions){
+			
+			// $('.trivia-question').append(triviaQuestions[0]);
+			// //Display correct answer and wrong answers - buttons 
+			// // Correct Answer is Plott Hound
+			// $('.answer-options').append("<button class='wrong'>" + "Border Collie" + "</button>");
+			// $('.answer-options').append("<button class='correct'>" + "Plott Hound" + "</button>");
+			// $('.answer-options').append("<button class='wrong'>" + "Irish Wolfhound" + "</button>");
+			// $('.answer-options').append("<button class='wrong'>" + "American Foxhound" + "</button>");
+
+			// $('.correct').click(function(){
+			// 	$('.time-left').html("You guessed Correctly!");
+			// 	correctAnswers++;
+			// });
+			// $('.wrong').click(function(){
+			// 	$('.time-left').html("You guessed Incorrectly! The correct Answer is Plott Hound.");
+			// 	wrongAnswers++;
+			// });
+
+			// $('.trivia-question').append(triviaQuestions[1]);
+
 
 			intervalId = setInterval(decrease, 1000);
 			// create function to decrease the timer by 1 every second
@@ -66,6 +100,6 @@ $('.start').click(function(start) {
 //Next question
 	}
 		
-		}
+		// }
 
 });
