@@ -6,15 +6,9 @@ var intervalId;
 // Start button function
 $('.start').click(function() {
 	console.log("start button clicked!")
-});
-// Run function starts the timer that decreases by 1 every second
-    function run() {
-		intervalId = setInterval(decrease, 1000);
-	}
-
-// Decrement function 
+intervalId = setInterval(decrease, 1000);
 	function decrease() {
-	// decrease second by 1
+// decrease second by 1
 		seconds--;
 	// show the seconds in the div with class time-left
 	$('.time-left').html("<h3>" + "Time Remaining: " + seconds + "</h3>");
@@ -23,15 +17,10 @@ $('.start').click(function() {
 		if (seconds === 0){
 			stop();
 			$('.time-left').html("<h3>Times Up!</h3>");
+			clearInterval(intervalId);
 		}
 	}
-// Stop function that resets timer
-	function stop(){
-		clearInterval(intervalId);
-	}
-
-// Execute run function
-run();
+});
 
 
 
