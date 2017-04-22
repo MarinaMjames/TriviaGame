@@ -1,4 +1,3 @@
-// GLOBAL VARIABLES
 // Variable that holds the number we want to count down from
 var seconds = 30; 
 // Variable that holds the Interval ID when we execute the "run" function
