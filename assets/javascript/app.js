@@ -9,34 +9,56 @@ var triviaQuestions = ['The state dog of North Carolina is what breed?',
 'What dog breed does not bark, but does make yodeling noises?', 
 'What dog breed has a water resistant coat and webbed feet', 
 'What is Corgi Welsh for?', 'What dog breed has 6 toes on each foot?']; 
-
+// Variable that stores correct Answers
+var correctAnswers;
+// Variable that stores wrong answers
+var wrongAnswers;
 // Start button function
 $('.start').click(function() {
+	
 	console.log("start button clicked!")
-	intervalId = setInterval(decrease, 1000);
+	// sets the interval to 1 sec and calls the decrease function
+	// removes start button
+	$('.start').remove();
+		// displays first question
+		
+		if (triviaQuestions = triviaQuestions){
+			
+			$('.trivia-question').append(triviaQuestions);
+			//Display correct answer and wrong answers - buttons 
+			// Correct Answer is Plott Hound
+			$('.answer-options').append("<button>" + "Border Collie" + "</button>");
+			$('.answer-options').append("<button>" + "Plott Hound" + "</button>");
+			$('.answer-options').append("<button>" + "Irish Wolfhound" + "</button>");
+			$('.answer-options').append("<button>" + "American Foxhound" + "</button>");
+
+
+
+			intervalId = setInterval(decrease, 1000);
+			// create function to decrease the timer by 1 every second
 		function decrease() {
+
 // decrease second by 1
 			seconds--;
 			// show the seconds in the div with class time-left
 			$('.time-left').html("<h3>" + "Time Remaining: " + seconds + "</h3>");
+			
 
 // When seconds left hits 0, show Times Up! in div with class time-left
 		if (seconds <= 0){
-			stop();
 			$('.time-left').html("<h3>Times Up!</h3>");
+			// resets the interalId variable
 			clearInterval(intervalId);
 		}
-	}
 
-// Create for loop that goes through triviaQuestions variable
-
-// Display Question on screen
-
-//Display correct answer and wrong answers - buttons 
 
 // On click of correct answer - display you are correct!
 
 // Reset Timer
 
 //Next question
+	}
+		
+		}
+
 });
