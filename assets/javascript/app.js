@@ -14,7 +14,7 @@ var correctAnswers;
 // Variable that stores wrong answers
 var wrongAnswers;
 // Start button function
-$('.start').click(function() {
+$('.start').click(function(start) {
 	
 	console.log("start button clicked!")
 	// sets the interval to 1 sec and calls the decrease function
@@ -27,12 +27,19 @@ $('.start').click(function() {
 			$('.trivia-question').append(triviaQuestions[0]);
 			//Display correct answer and wrong answers - buttons 
 			// Correct Answer is Plott Hound
-			$('.answer-options').append("<button>" + "Border Collie" + "</button>");
-			$('.answer-options').append("<button>" + "Plott Hound" + "</button>");
-			$('.answer-options').append("<button>" + "Irish Wolfhound" + "</button>");
-			$('.answer-options').append("<button>" + "American Foxhound" + "</button>");
+			$('.answer-options').append("<button class='wrong'>" + "Border Collie" + "</button>");
+			$('.answer-options').append("<button class='correct'>" + "Plott Hound" + "</button>");
+			$('.answer-options').append("<button class='wrong'>" + "Irish Wolfhound" + "</button>");
+			$('.answer-options').append("<button class='wrong'>" + "American Foxhound" + "</button>");
 
-
+			$('.correct').click(function(){
+				$('.time-left').html("You guessed Correctly!");
+				correctAnswers++;
+			});
+			$('.wrong').click(function(){
+				$('.time-left').html("You guessed Incorrectly! The correct Answer is Plott Hound.");
+				wrongAnswers++;
+			});
 
 			intervalId = setInterval(decrease, 1000);
 			// create function to decrease the timer by 1 every second
