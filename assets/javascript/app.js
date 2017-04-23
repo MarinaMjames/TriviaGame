@@ -10,9 +10,9 @@ var triviaQuestions = ['The state dog of North Carolina is what breed?',
 'What dog breed has a water resistant coat and webbed feet', 
 'What is Corgi Welsh for?', 'What dog breed has 6 toes on each foot?']; 
 // Variable that stores correct Answers
-var correctAnswers;
+var correctAnswers = 0;
 // Variable that stores wrong answers
-var wrongAnswers;
+var wrongAnswers = 0;
 // Start button function
 $('.start').click(function(start) {
 	
@@ -29,9 +29,11 @@ $('.start').click(function(start) {
 		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
+					console.log(correctAnswers);
 				});
 				$('.wrong').click(function(){
 					wrongAnswers++;
+					console.log(wrongAnswers);
 				});
 
 		$('.questionTwo').append(triviaQuestions[1]);
@@ -41,9 +43,11 @@ $('.start').click(function(start) {
 		$('.questionTwo').append("<input type='radio' name='questionTwo' class='correct'>" + " Alaskan Malamute" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
+					console.log(correctAnswers);
 				});
 				$('.wrong').click(function(){
 					wrongAnswers++;
+					console.log(wrongAnswers);
 				});
 
 		$('.questionThree').append(triviaQuestions[2]);
@@ -53,9 +57,11 @@ $('.start').click(function(start) {
 		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Maltese" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
+					console.log(correctAnswers);
 				});
 				$('.wrong').click(function(){
 					wrongAnswers++;
+					console.log(wrongAnswers);
 				});
 
 		$('.questionFour').append(triviaQuestions[3]);
@@ -65,9 +71,11 @@ $('.start').click(function(start) {
 		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Australian Shepherd" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
+					console.log(correctAnswers);
 				});
 				$('.wrong').click(function(){
 					wrongAnswers++;
+					console.log(wrongAnswers);
 				});
 		$('.questionFive').append(triviaQuestions[4]);
 		$('.questionFive').append("<br>" + "<input type='radio' name='questionFive' class='wrong'>" + " Italian Greyhound" + "</input>");
@@ -76,9 +84,11 @@ $('.start').click(function(start) {
 		$('.questionFive').append("<input type='radio' name='questionFive' class='correct'>" + " Newfoundland" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
+					console.log(correctAnswers);
 				});
 				$('.wrong').click(function(){
 					wrongAnswers++;
+					console.log(wrongAnswers);
 				});
 		$('.questionSix').append(triviaQuestions[5]);
 		$('.questionSix').append("<br>" + "<input type='radio' name='questionSix' class='wrong'>" + " Big ears" + "</input>");
@@ -87,24 +97,31 @@ $('.start').click(function(start) {
 		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Fluffy dog" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
+					console.log(correctAnswers);
 				});
 				$('.wrong').click(function(){
 					wrongAnswers++;
+					console.log(wrongAnswers);
 				});
-						$('.questionSeven').append(triviaQuestions[6]);
+		$('.questionSeven').append(triviaQuestions[6]);
 		$('.questionSeven').append("<br>" + "<input type='radio' name='questionSeven' class='wrong'>" + " Toy Fox Terrier" + "</input>");
 		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Basenji" + "</input>");
 		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Golden Retriever" + "</input>");
 		$('.questionSeven').append("<input type='radio' name='questionSeven' class='correct'>" + " Norwegian Lundehund" + "</input>" + "<br>");
 				$('.correct').click(function(){
 					correctAnswers++;
+					console.log(correctAnswers);
 				});
 				$('.wrong').click(function(){
 					wrongAnswers++;
+					console.log(wrongAnswers);
 				});
+		$('.done').html("<button class='btn btn-info btn-lg'>" + "Done" + "</button>");
 
 	$('.done').click(function(){
-
+		$('.tallies').html("Correct Answers: " + correctAnswers + "<br>" + "Not Correct Answers: " + wrongAnswers);
+		clearInterval(intervalId);
+		$('.time-left').remove();
 	});
 
 		// if (triviaQuestions = triviaQuestions){
