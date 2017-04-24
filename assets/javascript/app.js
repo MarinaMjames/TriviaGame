@@ -20,107 +20,61 @@ $('.start').click(function(start) {
 	// sets the interval to 1 sec and calls the decrease function
 	// removes start button
 	$('.start').remove();
-		// displays first question
+		// displays first question and answer choices
 		
 		$('.questionOne').append(triviaQuestions[0]);
 		$('.questionOne').append("<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie" + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne' class='correct'>" + " Plott Hound" + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wolfhound" + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound" + "</input>" + "<br>");
-				$('.correct').click(function(){
-					correctAnswers++;
-					console.log(correctAnswers);
-				});
-				$('.wrong').click(function(){
-					wrongAnswers++;
-					console.log(wrongAnswers);
-				});
 
+		// displays second question  and answer choices
 		$('.questionTwo').append(triviaQuestions[1]);
 		$('.questionTwo').append("<br>" + "<input type='radio' name='questionTwo' class='wrong'>" + " Afghan Hound" + "</input>");
 		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Old English Sheepdog" + "</input>");
 		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Shih Tzu" + "</input>");
 		$('.questionTwo').append("<input type='radio' name='questionTwo' class='correct'>" + " Alaskan Malamute" + "</input>" + "<br>");
-				$('.correct').click(function(){
-					correctAnswers++;
-					console.log(correctAnswers);
-				});
-				$('.wrong').click(function(){
-					wrongAnswers++;
-					console.log(wrongAnswers);
-				});
 
+		// displays third question and answer choices
 		$('.questionThree').append(triviaQuestions[2]);
 		$('.questionThree').append("<br>" + "<input type='radio' name='questionThree' class='correct'>" + " Chow Chow" + "</input>");
 		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Chihuahua" + "</input>");
 		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " French Bulldog" + "</input>");
 		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Maltese" + "</input>" + "<br>");
-				$('.correct').click(function(){
-					correctAnswers++;
-					console.log(correctAnswers);
-				});
-				$('.wrong').click(function(){
-					wrongAnswers++;
-					console.log(wrongAnswers);
-				});
 
+		// displays fourth question and answer choices
 		$('.questionFour').append(triviaQuestions[3]);
 		$('.questionFour').append("<br>" + "<input type='radio' name='questionFour' class='wrong'>" + " French Bulldog" + "</input>");
 		$('.questionFour').append("<input type='radio' name='questionFour' class='correct'>" + " Basenji" + "</input>");
 		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Alaskan Malamute" + "</input>");
 		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Australian Shepherd" + "</input>" + "<br>");
-				$('.correct').click(function(){
-					correctAnswers++;
-					console.log(correctAnswers);
-				});
-				$('.wrong').click(function(){
-					wrongAnswers++;
-					console.log(wrongAnswers);
-				});
+		// displays fifth question and answer choices
 		$('.questionFive').append(triviaQuestions[4]);
 		$('.questionFive').append("<br>" + "<input type='radio' name='questionFive' class='wrong'>" + " Italian Greyhound" + "</input>");
 		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " Basenji" + "</input>");
 		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " French Bulldog" + "</input>");
 		$('.questionFive').append("<input type='radio' name='questionFive' class='correct'>" + " Newfoundland" + "</input>" + "<br>");
-				$('.correct').click(function(){
-					correctAnswers++;
-					console.log(correctAnswers);
-				});
-				$('.wrong').click(function(){
-					wrongAnswers++;
-					console.log(wrongAnswers);
-				});
+		// displays sixth question and answer choices
 		$('.questionSix').append(triviaQuestions[5]);
 		$('.questionSix').append("<br>" + "<input type='radio' name='questionSix' class='wrong'>" + " Big ears" + "</input>");
 		$('.questionSix').append("<input type='radio' name='questionSix' class='correct'>" + " Dwarf dog" + "</input>");
 		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Little legs" + "</input>");
 		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Fluffy dog" + "</input>" + "<br>");
-				$('.correct').click(function(){
-					correctAnswers++;
-					console.log(correctAnswers);
-				});
-				$('.wrong').click(function(){
-					wrongAnswers++;
-					console.log(wrongAnswers);
-				});
+		// displays seventh question and answer choices
 		$('.questionSeven').append(triviaQuestions[6]);
 		$('.questionSeven').append("<br>" + "<input type='radio' name='questionSeven' class='wrong'>" + " Toy Fox Terrier" + "</input>");
 		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Basenji" + "</input>");
 		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Golden Retriever" + "</input>");
 		$('.questionSeven').append("<input type='radio' name='questionSeven' class='correct'>" + " Norwegian Lundehund" + "</input>" + "<br>");
-				$('.correct').click(function(){
-					correctAnswers++;
-					console.log(correctAnswers);
-				});
-				$('.wrong').click(function(){
-					wrongAnswers++;
-					console.log(wrongAnswers);
-				});
+		// create done button once game starts
 		$('.done').html("<button class='btn btn-info btn-lg'>" + "Done" + "</button>");
-
+	// creates click for done button 
 	$('.done').click(function(){
+		// Show answers when you click the done button 
 		$('.tallies').html("Correct Answers: " + correctAnswers + "<br>" + "Not Correct Answers: " + wrongAnswers);
+		// resets the timer
 		clearInterval(intervalId);
+		//removes the timer from the screen
 		$('.time-left').remove();
 	});
 
@@ -160,6 +114,8 @@ $('.start').click(function(start) {
 		
 		if (seconds <= 0){
 			$('.time-left').html("<h3>Times Up!</h3>");
+			// Show answers when you click the done button 
+			$('.tallies').html("Correct Answers: " + correctAnswers + "<br>" + "Not Correct Answers: " + wrongAnswers);
 			$('.questionOne').remove();
 			$('.questionTwo').remove();
 			$('.questionThree').remove();
