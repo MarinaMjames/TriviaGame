@@ -70,12 +70,19 @@ $('.start').click(function(start) {
 		$('.done').html("<button class='btn btn-info btn-lg'>" + "Done" + "</button>");
 	// creates click for done button 
 	$('.done').click(function(){
+		$('.time-left').html("<h3>Your Score: </h3>");
 		// Show answers when you click the done button 
 		$('.tallies').html("Correct Answers: " + correctAnswers + "<br>" + "Not Correct Answers: " + wrongAnswers);
 		// resets the timer
 		clearInterval(intervalId);
-		//removes the timer from the screen
-		$('.time-left').remove();
+		// Removes all questions when you click the Done button
+		$('.questionOne').remove();
+		$('.questionTwo').remove();
+		$('.questionThree').remove();
+		$('.questionFour').remove();
+		$('.questionFive').remove();
+		$('.questionSix').remove();
+		$('.questionSeven').remove();
 	});
 
 		// if (triviaQuestions = triviaQuestions){
@@ -126,15 +133,5 @@ $('.start').click(function(start) {
 			// resets the interalId variable
 			clearInterval(intervalId);
 		}
-
-
-// On click of correct answer - display you are correct!
-
-// Reset Timer
-
-//Next question
 	}
-		
-		// }
-
 });
