@@ -1,5 +1,3 @@
-/*font-family: 'Autour One', cursive;
-font-family: 'Amatica SC', cursive;*/
 body{
 	background: url(https://s-media-cache-ak0.pinimg.com/736x/54/9a/9f/549a9ff211973381eb89f0e08a979f98.jpg);
 }
@@ -14,9 +12,17 @@ h1{
 	margin-left: 120px;
 }
 button{
-	margin-left: 43%;
+	margin-left: 35%;
+	margin-top: 40px;
+	width: 200px;
 }
 .container{
-	background-color: rgba(255, 255, 255,0.6);
-	width: 50%;
+	background-color: rgba(255, 255, 255,0.7);
+	width: 60%;
+}
+.time-left, .tallies, .questionOne, .questionTwo, .questionThree, .questionFour, .questionFive, .questionSix, .questionSeven{
+	font-size: 15px;
+	font-family: 'Autour One', cursive;
+	margin-left: 50px;
+	margin-right: 50px;
 }

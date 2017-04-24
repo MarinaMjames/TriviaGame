@@ -3,12 +3,12 @@ var seconds = 30;
 // Variable that holds the Interval ID when we execute the "run" function
 var intervalId; 
 // Variable that holds trivia questions
-var triviaQuestions = ['The state dog of North Carolina is what breed?', 
-'Chewbacca, the hairy Wookiee in the Star Wars movies, was inspired by George Lucas what?', 
-'Every known dog breed except this one has a pink tongue. What is this breed?', 
-'What dog breed does not bark, but does make yodeling noises?', 
-'What dog breed has a water resistant coat and webbed feet', 
-'What is Corgi Welsh for?', 'What dog breed has 6 toes on each foot?']; 
+var triviaQuestions = ['1. The state dog of North Carolina is what breed?', 
+'2. Chewbacca, the hairy Wookiee in the Star Wars movies, was inspired by George Lucas what?', 
+'3. Every known dog breed except this one has a pink tongue. What is this breed?', 
+'4. What dog breed does not bark, but does make yodeling noises?', 
+'5. What dog breed has a water resistant coat and webbed feet', 
+'6. What is Corgi Welsh for?', '7. What dog breed has 6 toes on each foot?']; 
 // Variable that stores correct Answers
 var correctAnswers = 0;
 // Variable that stores wrong answers
@@ -23,49 +23,49 @@ $('.start').click(function(start) {
 		// displays first question and answer choices
 		
 		$('.questionOne').append(triviaQuestions[0]);
-		$('.questionOne').append("<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie" + "</input>");
-		$('.questionOne').append("<input type='radio' name='questionOne' class='correct'>" + " Plott Hound" + "</input>");
-		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wolfhound" + "</input>");
-		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound" + "</input>" + "<br>");
+		$('.questionOne').append("<br>" + "<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie " + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='correct'>" + " Plott Hound " + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wolfhound " + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound " + "</input>" + "<br>");
 
 		// displays second question  and answer choices
 		$('.questionTwo').append(triviaQuestions[1]);
-		$('.questionTwo').append("<br>" + "<input type='radio' name='questionTwo' class='wrong'>" + " Afghan Hound" + "</input>");
-		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Old English Sheepdog" + "</input>");
-		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Shih Tzu" + "</input>");
-		$('.questionTwo').append("<input type='radio' name='questionTwo' class='correct'>" + " Alaskan Malamute" + "</input>" + "<br>");
+		$('.questionTwo').append("<br>" + "<br>" + "<input type='radio' name='questionTwo' class='wrong'>" + " Afghan Hound " + "</input>");
+		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Old English Sheepdog " + "</input>");
+		$('.questionTwo').append("<input type='radio' name='questionTwo' class='wrong'>" + " Shih Tzu " + "</input>");
+		$('.questionTwo').append("<input type='radio' name='questionTwo' class='correct'>" + " Alaskan Malamute " + "</input>" + "<br>");
 
 		// displays third question and answer choices
 		$('.questionThree').append(triviaQuestions[2]);
-		$('.questionThree').append("<br>" + "<input type='radio' name='questionThree' class='correct'>" + " Chow Chow" + "</input>");
-		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Chihuahua" + "</input>");
-		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " French Bulldog" + "</input>");
-		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Maltese" + "</input>" + "<br>");
+		$('.questionThree').append("<br>" + "<br>" + "<input type='radio' name='questionThree' class='correct'>" + " Chow Chow " + "</input>");
+		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Chihuahua " + "</input>");
+		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " French Bulldog " + "</input>");
+		$('.questionThree').append("<input type='radio' name='questionThree' class='wrong'>" + " Maltese " + "</input>" + "<br>");
 
 		// displays fourth question and answer choices
 		$('.questionFour').append(triviaQuestions[3]);
-		$('.questionFour').append("<br>" + "<input type='radio' name='questionFour' class='wrong'>" + " French Bulldog" + "</input>");
-		$('.questionFour').append("<input type='radio' name='questionFour' class='correct'>" + " Basenji" + "</input>");
-		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Alaskan Malamute" + "</input>");
-		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Australian Shepherd" + "</input>" + "<br>");
+		$('.questionFour').append("<br>" + "<br>" + "<input type='radio' name='questionFour' class='wrong'>" + " French Bulldog " + "</input>");
+		$('.questionFour').append("<input type='radio' name='questionFour' class='correct'>" + " Basenji " + "</input>");
+		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Alaskan Malamute " + "</input>");
+		$('.questionFour').append("<input type='radio' name='questionFour' class='wrong'>" + " Australian Shepherd " + "</input>" + "<br>");
 		// displays fifth question and answer choices
 		$('.questionFive').append(triviaQuestions[4]);
-		$('.questionFive').append("<br>" + "<input type='radio' name='questionFive' class='wrong'>" + " Italian Greyhound" + "</input>");
-		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " Basenji" + "</input>");
-		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " French Bulldog" + "</input>");
-		$('.questionFive').append("<input type='radio' name='questionFive' class='correct'>" + " Newfoundland" + "</input>" + "<br>");
+		$('.questionFive').append("<br>" + "<br>" + "<input type='radio' name='questionFive' class='wrong'>" + " Italian Greyhound " + "</input>");
+		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " Basenji " + "</input>");
+		$('.questionFive').append("<input type='radio' name='questionFive' class='wrong'>" + " French Bulldog " + "</input>");
+		$('.questionFive').append("<input type='radio' name='questionFive' class='correct'>" + " Newfoundland " + "</input>" + "<br>");
 		// displays sixth question and answer choices
 		$('.questionSix').append(triviaQuestions[5]);
-		$('.questionSix').append("<br>" + "<input type='radio' name='questionSix' class='wrong'>" + " Big ears" + "</input>");
-		$('.questionSix').append("<input type='radio' name='questionSix' class='correct'>" + " Dwarf dog" + "</input>");
-		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Little legs" + "</input>");
-		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Fluffy dog" + "</input>" + "<br>");
+		$('.questionSix').append("<br>" + "<br>" + "<input type='radio' name='questionSix' class='wrong'>" + " Big ears " + "</input>");
+		$('.questionSix').append("<input type='radio' name='questionSix' class='correct'>" + " Dwarf dog " + "</input>");
+		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Little legs " + "</input>");
+		$('.questionSix').append("<input type='radio' name='questionSix' class='wrong'>" + " Fluffy dog " + "</input>" + "<br>");
 		// displays seventh question and answer choices
 		$('.questionSeven').append(triviaQuestions[6]);
-		$('.questionSeven').append("<br>" + "<input type='radio' name='questionSeven' class='wrong'>" + " Toy Fox Terrier" + "</input>");
-		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Basenji" + "</input>");
-		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Golden Retriever" + "</input>");
-		$('.questionSeven').append("<input type='radio' name='questionSeven' class='correct'>" + " Norwegian Lundehund" + "</input>" + "<br>");
+		$('.questionSeven').append("<br>" + "<br>" + "<input type='radio' name='questionSeven' class='wrong'>" + " Toy Fox Terrier " + "</input>");
+		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Basenji " + "</input>");
+		$('.questionSeven').append("<input type='radio' name='questionSeven' class='wrong'>" + " Golden Retriever " + "</input>");
+		$('.questionSeven').append("<input type='radio' name='questionSeven' class='correct'>" + " Norwegian Lundehund " + "</input>" + "<br>");
 		// create done button once game starts
 		$('.done').html("<button class='btn btn-info btn-lg'>" + "Done" + "</button>");
 	// creates click for done button 
