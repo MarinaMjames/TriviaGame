@@ -1,5 +1,5 @@
 // Variable that holds the number we want to count down from
-var seconds = 30; 
+var seconds = 40; 
 // Variable that holds the Interval ID when we execute the "run" function
 var intervalId; 
 // Variable that holds trivia questions
