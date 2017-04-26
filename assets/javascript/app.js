@@ -84,6 +84,7 @@ $('.start').click(function(start) {
 		$('.questionFive').remove();
 		$('.questionSix').remove();
 		$('.questionSeven').remove();
+		$('.done').remove();
 
 
 	});
@@ -113,6 +114,7 @@ $('.start').click(function(start) {
 			$('.questionSeven').remove();
 			// resets the interalId variable
 			clearInterval(intervalId);
+			$('.done').remove();
 		}
 	}
 
