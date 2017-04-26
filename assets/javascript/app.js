@@ -113,27 +113,19 @@ $('.start').click(function(start) {
 			$('.questionSeven').remove();
 			// resets the interalId variable
 			clearInterval(intervalId);
-
 		}
-
 	}
-// answer();
+
+// calculates how many questions the player guessed correctly 
 $('.correct').click(function(){
 	if ($('.correct' == true)){
 		correctAnswers++;
 	}
-	else {
+});
+// calculates how many questions the player guessed incorrectly 
+$('.wrong').click(function(){
+	if ($('.wrong' == true)){
 		wrongAnswers++;
 	}
 });
 });
-// function answer(){
-// 		if ($('input').hasClass('.correct')) {
-// 			correctAnswers++;
-// 			console.log(correctAnswers);
-// 		}
-// 		else if ($('input').hasClass('.wrong')){
-// 			wrongAnswers++;
-// 			console.log(wrongAnswers);
-// 		}
-// }
