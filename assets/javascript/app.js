@@ -25,7 +25,7 @@ $('.start').click(function(start) {
 		$('.questionOne').append(triviaQuestions[0]);
 		$('.questionOne').append("<br>" + "<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie " + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne' class='correct'>" + " Plott Hound " + "</input>");
-		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wbuttonolfhound " + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wolfhound " + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne'class='wrong'>" + " American Foxhound " + "</input>" + "<br>");
 
 		// displays second question  and answer choices
