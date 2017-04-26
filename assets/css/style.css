@@ -16,12 +16,18 @@ button{
 	margin-top: 40px;
 	width: 200px;
 }
+input{
+	font-size: 13px;
+	font-family: 'Autour One', cursive;
+	margin-left: 50px;
+	margin-right: 50px;
+}
 .container{
 	background-color: rgba(255, 255, 255,0.7);
 	width: 60%;
 }
 .time-left, .tallies, .questionOne, .questionTwo, .questionThree, .questionFour, .questionFive, .questionSix, .questionSeven{
-	font-size: 15px;
+	font-size: 20px;
 	font-family: 'Autour One', cursive;
 	margin-left: 50px;
 	margin-right: 50px;

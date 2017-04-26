@@ -8,7 +8,7 @@ var triviaQuestions = ['1. The state dog of North Carolina is what breed?',
 '3. Every known dog breed except this one has a pink tongue. What is this breed?', 
 '4. What dog breed does not bark, but does make yodeling noises?', 
 '5. What dog breed has a water resistant coat and webbed feet', 
-'6. What is Corgi Welsh for?', '7. What dog breed has 6 toes on each foot?']; 
+'6.What is Corgi Welsh for?', '7. What dog breed has 6 toes on each foot?']; 
 // Variable that stores correct Answers
 var correctAnswers = 0;
 // Variable that stores wrong answers
@@ -25,8 +25,8 @@ $('.start').click(function(start) {
 		$('.questionOne').append(triviaQuestions[0]);
 		$('.questionOne').append("<br>" + "<br>" + "<input type='radio' name='questionOne' class='wrong'>" + " Border Collie " + "</input>");
 		$('.questionOne').append("<input type='radio' name='questionOne' class='correct'>" + " Plott Hound " + "</input>");
-		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wolfhound " + "</input>");
-		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " American Foxhound " + "</input>" + "<br>");
+		$('.questionOne').append("<input type='radio' name='questionOne' class='wrong'>" + " Irish Wbuttonolfhound " + "</input>");
+		$('.questionOne').append("<input type='radio' name='questionOne'class='wrong'>" + " American Foxhound " + "</input>" + "<br>");
 
 		// displays second question  and answer choices
 		$('.questionTwo').append(triviaQuestions[1]);
@@ -68,6 +68,7 @@ $('.start').click(function(start) {
 		$('.questionSeven').append("<input type='radio' name='questionSeven' class='correct'>" + " Norwegian Lundehund " + "</input>" + "<br>");
 		// create done button once game starts
 		$('.done').html("<button class='btn btn-info btn-lg'>" + "Done" + "</button>");
+
 	// creates click for done button 
 	$('.done').click(function(){
 		$('.time-left').html("<h3>Your Score: </h3>");
@@ -83,29 +84,9 @@ $('.start').click(function(start) {
 		$('.questionFive').remove();
 		$('.questionSix').remove();
 		$('.questionSeven').remove();
+
+
 	});
-
-		// if (triviaQuestions = triviaQuestions){
-			
-			// $('.trivia-question').append(triviaQuestions[0]);
-			// //Display correct answer and wrong answers - buttons 
-			// // Correct Answer is Plott Hound
-			// $('.answer-options').append("<button class='wrong'>" + "Border Collie" + "</button>");
-			// $('.answer-options').append("<button class='correct'>" + "Plott Hound" + "</button>");
-			// $('.answer-options').append("<button class='wrong'>" + "Irish Wolfhound" + "</button>");
-			// $('.answer-options').append("<button class='wrong'>" + "American Foxhound" + "</button>");
-
-			// $('.correct').click(function(){
-			// 	$('.time-left').html("You guessed Correctly!");
-			// 	correctAnswers++;
-			// });
-			// $('.wrong').click(function(){
-			// 	$('.time-left').html("You guessed Incorrectly! The correct Answer is Plott Hound.");
-			// 	wrongAnswers++;
-			// });
-
-			// $('.trivia-question').append(triviaQuestions[1]);
-
 
 			intervalId = setInterval(decrease, 1000);
 			// create function to decrease the timer by 1 every second
@@ -132,6 +113,27 @@ $('.start').click(function(start) {
 			$('.questionSeven').remove();
 			// resets the interalId variable
 			clearInterval(intervalId);
+
 		}
+
+	}
+// answer();
+$('.correct').click(function(){
+	if ($('.correct' == true)){
+		correctAnswers++;
+	}
+	else {
+		wrongAnswers++;
 	}
 });
+});
+// function answer(){
+// 		if ($('input').hasClass('.correct')) {
+// 			correctAnswers++;
+// 			console.log(correctAnswers);
+// 		}
+// 		else if ($('input').hasClass('.wrong')){
+// 			wrongAnswers++;
+// 			console.log(wrongAnswers);
+// 		}
+// }
