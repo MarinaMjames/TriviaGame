@@ -14,10 +14,9 @@ var correctAnswers = 0;
 // Variable that stores wrong answers
 var wrongAnswers = 0;
 // Start button function
-$('.start').click(function(start) {
+$('.start').click(function(start, reset) {
 	
-	console.log("start button clicked!")
-	// sets the interval to 1 sec and calls the decrease function
+
 	// removes start button
 	$('.start').remove();
 		// displays first question and answer choices
@@ -85,10 +84,10 @@ $('.start').click(function(start) {
 		$('.questionSix').remove();
 		$('.questionSeven').remove();
 		$('.done').remove();
-
+		$('.reset').html("<button class='btn btn-info btn-lg'>" + "Reset" + "</button>");
 
 	});
-
+	// sets the interval to 1 sec and calls the decrease function
 			intervalId = setInterval(decrease, 1000);
 			// create function to decrease the timer by 1 every second
 		function decrease() {
@@ -105,6 +104,7 @@ $('.start').click(function(start) {
 			$('.time-left').html("<h3>Times Up!</h3>");
 			// Show answers when you click the done button 
 			$('.tallies').html("Correct Answers: " + correctAnswers + "<br>" + "Not Correct Answers: " + wrongAnswers);
+			// removes all the questions from screen when you click done
 			$('.questionOne').remove();
 			$('.questionTwo').remove();
 			$('.questionThree').remove();
@@ -115,6 +115,7 @@ $('.start').click(function(start) {
 			// resets the interalId variable
 			clearInterval(intervalId);
 			$('.done').remove();
+			$('.reset').html("<button class='btn btn-info btn-lg'>" + "Reset" + "</button>");
 		}
 	}
 
@@ -129,5 +130,9 @@ $('.wrong').click(function(){
 	if ($('.wrong' == true)){
 		wrongAnswers++;
 	}
+});
+// resets the screen to the original way it was
+$('.reset').click(function(){
+	location.reload();
 });
 });
